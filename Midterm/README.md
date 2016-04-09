@@ -1,2 +1,2 @@
 題目：Design and implement a logic circuit for decoding your ID in a 7-segment LED in order, assuming three inputs (A, B, C) are used.
-![Alt text](https://github.com/clive819/YZUEE-Freshman-Digital-Logic-Design-Laboratory/blob/Master/Midterm/screenshot.png?raw=true)
+![Alt text](https://github.com/clive819/YZUEE-Freshman-Digital-Logic-Design-Laboratory/blob/Master/Midterm/Screenshot.png?raw=true)
