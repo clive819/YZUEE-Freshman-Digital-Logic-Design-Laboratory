@@ -10,7 +10,7 @@ for s in xrange(1,4):
         for j in zip(*a):
             b.append(reduce(lambda x, y: x and y, j))
         combinations.setdefault(i, b)
-result = {'a':[1],'b':[1],'c':[1],'d':[1],'e':[1],'f':[1],'g':[1]}
+result = {'A':[1],'B':[1],'C':[1],'D':[1],'E':[1],'F':[1],'G':[1]}
 digit = raw_input('Enter 7 digits number: ')
 while not re.match("\d\d\d\d\d\d\d", digit):
     print 'Input Error'
@@ -20,7 +20,6 @@ for i in xrange(7):
     for j in sorted(result.keys()):
         result[j].append(num[int(digit[i])][n])
         n += 1
-print '[#] a=A\', b=B\', c=C\''
 for i in sorted(result.keys()):
     p = []
     if result[i] == [1 for one in xrange(8)]:
@@ -36,6 +35,7 @@ for i in sorted(result.keys()):
             find = True
             break
     if find:
+        p = [i.replace('a', 'A\'').replace('b', 'B\'').replace('c', 'C\'') for i in p]
         print min(p, key=len)
         continue
     for j in sorted(combinations.keys()):
@@ -46,6 +46,7 @@ for i in sorted(result.keys()):
                 find = True
                 break
     if find:
+        p = [i.replace('a', 'A\'').replace('b', 'B\'').replace('c', 'C\'') for i in p]
         print min(p, key=len)
         continue
     for j in sorted(combinations.keys()):
@@ -57,6 +58,7 @@ for i in sorted(result.keys()):
                     find = True
                     break
     if find:
+        p = [i.replace('a', 'A\'').replace('b', 'B\'').replace('c', 'C\'') for i in p]
         print min(p, key=len)
         continue
     for j in sorted(combinations.keys()):
@@ -68,4 +70,5 @@ for i in sorted(result.keys()):
                         p.append('%s: %s+%s+%s+%s' % (i, j, k, l, m))
                         find = True
                         break
+    p = [i.replace('a', 'A\'').replace('b', 'B\'').replace('c', 'C\'') for i in p]
     print min(p, key=len)
