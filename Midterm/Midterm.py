@@ -29,45 +29,45 @@ for i in sorted(result.keys()):
         print '%s: GND' % i
         continue
     find = False
-    for j in sorted(combinations.keys()):
-        if result[i] == combinations[j]:
-            p.append('%s: %s' % (i, j))
+    for j in xrange(41):
+        if result[i] == combinations[combinations.keys()[j]]:
+            p.append('%s: %s' % (i, combinations.keys()[j]))
             find = True
             break
     if find:
         p = [i.replace('a', 'A\'').replace('b', 'B\'').replace('c', 'C\'') for i in p]
         print min(p, key=len)
         continue
-    for j in sorted(combinations.keys()):
-        for k in sorted(combinations.keys()):
-            tmp = map(lambda x, y: x or y, combinations[j], combinations[k])
+    for j in xrange(41):
+        for k in xrange(41):
+            tmp = map(lambda x, y: x or y, combinations[combinations.keys()[j]], combinations[combinations.keys()[k]])
             if result[i] == tmp:
-                p.append('%s: %s+%s' % (i, j, k))
+                p.append('%s: %s+%s' % (i, combinations.keys()[j], combinations.keys()[k]))
                 find = True
                 break
     if find:
         p = [i.replace('a', 'A\'').replace('b', 'B\'').replace('c', 'C\'') for i in p]
         print min(p, key=len)
         continue
-    for j in sorted(combinations.keys()):
-        for k in sorted(combinations.keys()):
-            for l in sorted(combinations.keys()):
-                tmp = map(lambda x, y, z: x or y or z, combinations[j], combinations[k], combinations[l])
+    for j in xrange(41):
+        for k in xrange(41):
+            for l in xrange(41):
+                tmp = map(lambda x, y, z: x or y or z, combinations[combinations.keys()[j]], combinations[combinations.keys()[k]], combinations[combinations.keys()[l]])
                 if result[i] == tmp:
-                    p.append('%s: %s+%s+%s' % (i, j, k, l))
+                    p.append('%s: %s+%s+%s' % (i, combinations.keys()[j], combinations.keys()[k], combinations.keys()[l]))
                     find = True
                     break
     if find:
         p = [i.replace('a', 'A\'').replace('b', 'B\'').replace('c', 'C\'') for i in p]
         print min(p, key=len)
         continue
-    for j in sorted(combinations.keys()):
-        for k in sorted(combinations.keys()):
-            for l in sorted(combinations.keys()):
-                for m in sorted(combinations.keys()):
-                    tmp = map(lambda x, y, z, n: x or y or z or n, combinations[j], combinations[k], combinations[l], combinations[m])
+    for j in xrange(41):
+        for k in xrange(41):
+            for l in xrange(41):
+                for m in xrange(41):
+                    tmp = map(lambda x, y, z, n: x or y or z or n, combinations[combinations.keys()[j]], combinations[combinations.keys()[k]], combinations[combinations.keys()[l]], combinations[combinations.keys()[m]])
                     if result[i] == tmp:
-                        p.append('%s: %s+%s+%s+%s' % (i, j, k, l, m))
+                        p.append('%s: %s+%s+%s+%s' % (i, combinations.keys()[j], combinations.keys()[k], combinations.keys()[l], combinations.keys()[m]))
                         find = True
                         break
     p = [i.replace('a', 'A\'').replace('b', 'B\'').replace('c', 'C\'') for i in p]
