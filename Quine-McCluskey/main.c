@@ -34,7 +34,7 @@ int main(void){
         int count=0;
         for (int j=0; j<range[i-1]; j++) {
             for (int k=0; k<range[i-1]; k++) {
-                if (ones(&f[i-1][j])+1 == ones(&f[i-1][k])) {
+                if (ones(f[i-1][j])+1 == ones(f[i-1][k])) {
                     int difference = 0;
                     for (int l=0; l<4; l++) {
                         if (f[i-1][j][l] != f[i-1][k][l]) {
