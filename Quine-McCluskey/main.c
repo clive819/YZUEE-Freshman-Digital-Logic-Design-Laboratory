@@ -1,7 +1,7 @@
 /*
  Student: 劉醇浩
  ID: s1040641
- Date: 2016/05/12
+ Date: 2016/05/10
  */
 #include <stdio.h>
 #include <stdlib.h>
@@ -88,35 +88,25 @@ int main(void){
             }
         }
     }
-    int final[9999][4], length=0;
+    printf("f = ");
+    int c = 0;
     for (int i=0; i<len; i++) {
         if (printable[i][4] != 2) {
-            length++;
+            if (c!=0) {
+                printf(" + ");
+            }
             for (int j=0; j<4; j++) {
-                final[i][j] = printable[i][j];
+                if (printable[i][j] == 0) {
+                    printf("%c\'", j+65);
+                }
+                else if (printable[i][j] == 1){
+                    printf("%c", j+65);
+                }
             }
+            c++;
         }
     }
-    for (int j=0; j<4; j++) {
-        if (printable[0][j] == 0) {
-            printf("%c\'", j+65);
-        }
-        else if (printable[0][j] == 1){
-            printf("%c", j+65);
-        }
-    }
-    for (int i=1; i<length; i++) {
-        printf(" + ");
-        for (int j=0; j<4; j++) {
-            if (printable[i][j] == 0) {
-                printf("%c\'", j+65);
-            }
-            else if (printable[i][j] == 1){
-                printf("%c", j+65);
-            }
-        }
-    }
-
+    
     printf("\n");
     system("pause");
     
