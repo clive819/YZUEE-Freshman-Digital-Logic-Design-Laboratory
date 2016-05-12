@@ -1,0 +1,2 @@
+![Alt text](https://github.com/clive819/YZUEE-Freshman-Digital-Logic-Design-Laboratory/blob/Master/Quine-McCluskey/example.png)
+![Alt text](https://github.com/clive819/YZUEE-Freshman-Digital-Logic-Design-Laboratory/blob/Master/Quine-McCluskey/result.png)
